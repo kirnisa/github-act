@@ -1,0 +1,11 @@
+name: second-action
+on: [push]
+
+jobs:
+  checked-env:
+    runs-on: ubuntu-latest
+    steps:
+      - name: env 
+        run: |
+          echo '${{vars.STATUS}}'
+          echo '${{secrets.PASSWORD}}'
